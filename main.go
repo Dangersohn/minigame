@@ -22,6 +22,10 @@ func (p *Unit) Hit(dmg int) {
 	p.Leben = p.Leben - dmg
 }
 
+func test(p *Unit, g *Unit) {
+
+}
+
 func main() {
 	//legt units an
 	karl := Unit{Leben: 100, Armor: 5, Schaden: 20, AmLeben: true}
