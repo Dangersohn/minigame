@@ -12,8 +12,8 @@ func menu(input int) {
 
 func main() {
 	//legt units an
-	karl := unit.Unit{Leben: 100, Armor: 5, Schaden: 20, AmLeben: true}
-	dude := unit.Unit{Leben: 100, Armor: 2, Schaden: 10, AmLeben: true}
+	karl := &unit.Unit{Leben: 100, Armor: 5, Schaden: 20, AmLeben: true}
+	dude := &unit.Unit{Leben: 100, Armor: 2, Schaden: 10, AmLeben: true}
 
 	fight.Combat(karl, dude)
 }
