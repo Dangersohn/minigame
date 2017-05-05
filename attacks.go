@@ -10,7 +10,6 @@ func SchlagNormal(angreifer *Unit, verteidiger *Unit) {
 
 //SchlagSchwer ist ein ungenauer angriff macht viel Schaden
 func SchlagSchwer(angreifer *Unit, verteidiger *Unit) {
-
 	fmt.Printf("%s greift %s mit Schlag Schwer an\n", angreifer.Name, verteidiger.Name)
 	verteidiger.SetLeben(angreifer.Schaden * 3)
 }

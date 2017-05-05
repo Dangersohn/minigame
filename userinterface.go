@@ -21,8 +21,12 @@ func Atkausgabe(you *Unit) {
 
 //Angriffwahl logig hinter dem angriff menu
 func Angriffwahl(you *Unit, enemy *Unit) {
-	var i int
-	input, _ := fmt.Scanf("%d", &i)
+	var input int
+	_, err := fmt.Scanf("%d", &input)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println("eingabe", input)
 	switch input {
 	case 1:
 		SchlagNormal(you, enemy)

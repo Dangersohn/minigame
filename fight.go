@@ -8,9 +8,12 @@ import (
 //Combat läuft so lange bis einer der betiligten tot ist
 func Combat(you *Unit, enemy *Unit) {
 	for enemy.AmLeben && you.AmLeben {
-		Menu(you, enemy)
-		Angriffwahl(you, enemy)
-		for enemy.AmLeben && you.AmLeben {
+		if enemy.AmLeben && you.AmLeben {
+			Menu(you, enemy)
+			Angriffwahl(you, enemy)
+		}
+
+		if enemy.AmLeben && you.AmLeben {
 			Randatk(enemy, you)
 		}
 		//fmt.Println("leben gegner", enemy.Leben)
