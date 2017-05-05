@@ -1,9 +1,8 @@
 package main
 
-import "fmt"
-
 func main() {
 	//legt units an
-	karl := NewUnit(100, 5, 10, true)
-	fmt.Println(karl.Angriffe[0])
+	karl := NewUnit(100, 5, 20, true, "Schlag Normal", "Schlag Schwer", "Ninja Kick")
+	dude := NewUnit(100, 5, 20, true, "Schlag Normal", "Schlag Schwer", "")
+	Combat(karl, dude)
 }

@@ -10,14 +10,16 @@ type Unit struct {
 }
 
 //NewUnit legt einen neue Einheit an
-func NewUnit(leben, armor, schaden int, amleben bool) *Unit {
+func NewUnit(leben, armor, schaden int, amleben bool, attacke, attacke2, attack3 string) *Unit {
 	p := &Unit{
 		Leben:   leben,
 		Armor:   armor,
 		Schaden: schaden,
 		AmLeben: amleben,
 		Angriffe: []string{
-			"test",
+			attacke,
+			attacke2,
+			attack3,
 		},
 	}
 	return p

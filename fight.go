@@ -4,7 +4,6 @@ package main
 func Combat(you *Unit, enemy *Unit) {
 	for enemy.AmLeben {
 		Menu(you, enemy)
-		enemy.SetLeben(SchlagNormal(you))
 		//fmt.Println("leben gegner", enemy.Leben)
 	}
 }
