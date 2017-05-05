@@ -12,9 +12,10 @@ func check(e error) {
 	}
 }
 
-func textausgabe() {
-
-	f, err := os.Open("choices/choice1.1.txt")
+func textausgabe(datei string) {
+	datei = "choices/" + datei
+	fmt.Println(datei)
+	f, err := os.Open(datei)
 	check(err)
 	ff, err := f.Stat()
 	fff := ff.Size()
