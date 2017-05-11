@@ -16,7 +16,9 @@ func Combat(you *Unit, enemy *Unit) {
 		if enemy.AmLeben && you.AmLeben {
 			Randatk(enemy, you)
 		}
-		//fmt.Println("leben gegner", enemy.Leben)
+	}
+	if you.AmLeben {
+		println("Rufus gewinnt den Kampf")
 	}
 }
 

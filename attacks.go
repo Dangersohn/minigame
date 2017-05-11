@@ -4,7 +4,7 @@ import "fmt"
 
 //SchlagNormal berechnet den Schaden den er Angreifer machen wird
 func SchlagNormal(angreifer *Unit, verteidiger *Unit) {
-	fmt.Printf("%s greift %s mit Schlag Normal an\n", angreifer.Name, verteidiger.Name)
+	fmt.Printf("%s greift %s mit Schlag Normal an ", angreifer.Name, verteidiger.Name)
 	verteidiger.SetLeben(angreifer.Schaden * 1)
 }
 

@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //Unit hat enthält eigenschaften der Einheiten
 type Unit struct {
 	Name     string
@@ -32,7 +30,6 @@ func NewUnit(name string, leben, armor, schaden int, amleben bool, attacke, atta
 
 //SetLeben setzt das leben
 func (p *Unit) SetLeben(dmg int) {
-	fmt.Println("in Set leben", dmg-p.Armor)
 	p.Leben = p.Leben - (dmg - p.Armor)
 	p.CheckLife()
 }
